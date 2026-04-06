@@ -1,0 +1,82 @@
+# CompTIA Network+
+
+## Hour 1 Notes — OSI Model
+
+**OSI** stands for Open Systems Interconnection Reference Model. It is a conceptual guide, not a strict implementation. Each layer has its own unique protocols.
+
+There are **7 layers** in the OSI Model:
+
+| Layer | Name         |
+|-------|--------------|
+| 7     | Application  |
+| 6     | Presentation |
+| 5     | Session      |
+| 4     | Transport    |
+| 3     | Network      |
+| 2     | Data Link    |
+| 1     | Physical     |
+
+**Mnemonic (top to bottom):** *All People Seem To Need Data Processing*
+
+---
+
+### Layer 1 — Physical Layer
+- Responsible for transmitting raw physical signals through cables and hardware.
+- No protocols at this layer.
+- Issues here are typically hardware-related: cables, connectors, NICs, etc.
+
+---
+
+### Layer 2 — Data Link Layer
+- Fundamental layer for communication between directly connected devices.
+- Operates using **MAC addresses**.
+- Data Link Control (DLC) protocols are commonly associated with network interface cards (NICs).
+- Also known as the **switching layer** — network switches operate here, forwarding frames based on destination MAC addresses.
+
+---
+
+### Layer 3 — Network Layer
+- Also known as the **routing layer**.
+- Routers operate at this layer, forwarding traffic based on destination **IP addresses**.
+- Data is broken into **packets** for traversal across networks and reassembled at the destination.
+
+---
+
+### Layer 4 — Transport Layer
+- Responsible for transporting data between devices end-to-end.
+- Also known as the **post office layer**.
+- Handles segmentation: breaking large data into smaller pieces and reassembling them at the destination.
+- Key protocols:
+  - **TCP** — Transmission Control Protocol (connection-oriented, reliable)
+  - **UDP** — User Datagram Protocol (connectionless, faster)
+
+---
+
+### Layer 5 — Session Layer
+- Manages communication sessions between devices.
+- Responsible for starting, stopping, and restarting sessions.
+- Protocols include control protocols and tunneling protocols.
+
+---
+
+### Layer 6 — Presentation Layer
+- Translates data into a human-readable format.
+- Handles **character encoding**, and **application-level encryption/decryption**.
+- Often considered alongside the Application layer in practice.
+
+---
+
+### Layer 7 — Application Layer
+- The layer that end users directly interact with.
+- Common protocols: **HTTP, HTTPS, FTP, DNS, POP3**, and many others.
+
+---
+
+## Real-World Mapping 
+ 1 — Physical     | Cables, fiber optics, electrical/radio signals 
+ 2 — Data Link    | Ethernet frames, MAC addresses, EUI-48/EUI-64, switches 
+ 3 — Network      | IP addresses, routers, packets 
+ 4 — Transport    | TCP segments, UDP datagrams, port numbers 
+ 5 — Session      | Control protocols, tunneling protocols 
+ 6 — Presentation | SSL/TLS encryption 
+ 7 — Application  | User-facing apps and services (browser, email client, etc.) 
